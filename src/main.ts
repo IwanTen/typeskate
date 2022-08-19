@@ -1,27 +1,27 @@
 import Phaser from "phaser";
-import Scene1 from "./scene1";
-
+import { Scene, Loading } from "./scenes/index";
+import "./style.css";
 var config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
-  width: 256,
-  height: 128,
   backgroundColor: "0A0A0A",
-  zoom: 3,
+  zoom: 1,
+  width: 512,
+  height: 128,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    parent: "game-canvas",
+    width: 512,
+    height: 128,
+  },
   pixelArt: true,
   physics: {
     default: "arcade",
     arcade: {
       gravity: { y: 200 },
-      debug: false,
+      debug: true,
     },
   },
-  scene: [Scene1],
+  scene: [Loading, Scene],
 };
 
-let game = new Phaser.Game(config);
-
-// platforms = this.physics.add.staticGroup();
-// platforms.create(0, 62, "ground");
-// platforms.create(64, 62, "ground");
-// platforms.create(128, 62, "ground");
-// platforms.create(192, 62, "ground");
+export default new Phaser.Game(config);

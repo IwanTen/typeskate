@@ -7,19 +7,12 @@ export default class Scene1 extends Phaser.Scene {
   constructor() {
     super("");
     // let player;
-    // let platforms;
-    // let bg;
-    // let ground;
+
     this.deltaV = 0;
   }
 
   preload() {
     this.load.image("ground", "src/assets/skateGroundv1.png");
-    this.load.image("sky", "src/assets/sky.png");
-    this.load.spritesheet("board", "src/assets/board.png", {
-      frameWidth: 22,
-      frameHeight: 4,
-    });
     this.load.image("bg", "src/assets/test-bg.png");
     this.load.spritesheet("skater", "src/assets/skater_push.png", {
       frameWidth: 49,
