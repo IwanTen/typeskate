@@ -1,4 +1,4 @@
-Typeskate is an applicatiion built with the purpose to merge the flow state captured by skateboarding with the technicality and flow of typing on a keyboard.
+Typeskate is an application built with the purpose to merge the flow state captured by skateboarding with the technicality and flow of typing on a keyboard.
 
 This project is built using the Phaser javascript game engine, Typescript, and React.
 
